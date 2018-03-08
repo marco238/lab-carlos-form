@@ -1,18 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { UserFormComponent } from './components/user/user-form/user-form.component';
+import { UserItemComponent } from './components/user/user-item/user-item.component';
+import { UserListComponent } from './components/user/user-list/user-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserFormComponent
+    UserFormComponent,
+    UserItemComponent,
+    UserListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,20 +1,36 @@
-<form class="" (ngSubmit)="onSubmitQuoteForm(quoteForm)" #quoteForm="ngForm">
+<form class="" (ngSubmit)="onSubmitUserForm(userForm)" #userForm="ngForm">
     <div class="">
         <label for="name">Name: </label>
-        <input type="text" name="name" value="" [(ngModel)]="user.name">
+        <input type="text" name="name" value="" #name="ngModel" [(ngModel)]="user.name" required minlength="3">
+        <ul *ngIf="name.errors && name.touched">
+          <li *ngIf="name.errors.required">Author is required</li>
+          <li *ngIf="name.errors.minlength">Min length 3</li>
+        </ul>
     </div>
     <div class="">
         <label for="email">E-mail: </label>
-        <input type="text" name="email" value="" [(ngModel)]="user.email">
+        <input type="text" name="email" value="" #email="ngModel" [(ngModel)]="user.email" required email>
+        <ul *ngIf="email.errors && email.touched">
+          <li *ngIf="email.errors.required">Author is required</li>
+          <li *ngIf="email.errors.email">Not a valid email</li>
+        </ul>
     </div>
     <div class="">
         <label for="password">Password</label>
-        <input type="text" name="password" value="" [(ngModel)]="user.password">
+        <input type="password" name="password" value="" #password="ngModel" [(ngModel)]="user.password" required minlength="6">
+        <ul *ngIf="password.errors && password.touched">
+          <li *ngIf="password.errors.required">Author is required</li>
+          <li *ngIf="password.errors.minlength">Min length 6</li>
+        </ul>
     </div>
     <div class="">
         <label for="bday">Birthday</label>
-        <input type="text" name="bday" value="" [(ngModel)]="user.birthday">
+        <input type="date" name="bday" value="" #bday="ngModel" [(ngModel)]="user.birthday" required>
+        <ul *ngIf="bday.errors && bday.touched">
+          <li *ngIf="bday.errors.required">Author is required</li>
+        </ul>
     </div>
+    <button type="submit" [disabled]="!userForm.valid">Submit user</button>
 </form>
 
 <hr>

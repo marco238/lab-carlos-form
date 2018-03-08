@@ -7,11 +7,11 @@ import { NgForm } from '@angular/forms';
   templateUrl: './user-form.component.html',
   styleUrls: ['./user-form.component.css']
 })
-export class QuoteFormComponent  {
+export class UserFormComponent  {
   user: User = new User();
   @Output() onCreate: EventEmitter<User> = new EventEmitter<User>();
 
-  onSubmitQuoteForm(quoteForm: NgForm) {
+  onSubmitUserForm(quoteForm: NgForm) {
     console.log(this.user);
     this.onCreate.emit(this.user); // this.onCreate.emit(Object.assign({}, this.quote));
     this.user = new User();
