@@ -1,6 +1,9 @@
 <app-user-form (onCreate)="onCreateUser($event)"></app-user-form>
+
+<h4 *ngIf="users[0]">Users list</h4>
+
 <ul>
-  <li *ngFor="let user of users">
+  <li *ngFor="let user of users | filter:'email':searchText">
     <app-user-item [user]="user"></app-user-item>
   </li>
 </ul>
