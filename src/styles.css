@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.title {
+  font-family: 'Amatic SC', cursive;
+  font-size: 80px;
+  margin: 10vh;
+}
+
+.listTitle {
+  font-family: 'Amatic SC', cursive;
+}
+
+.submit-btn {
+  margin: 5px auto 20px;
+}

@@ -10,12 +10,12 @@
   <hr class="col s6 offset-s3">
 
   <div class="list col s6 offset-s3">
-    <h4 *ngIf="users[0]">Users list</h4>
+    <h4 *ngIf="users[0]" class="center listTitle">Users list</h4>
 
     <ul>
       <li *ngFor="let user of users | filter:'email':searchText">
-        <app-user-item [user]="user"></app-user-item>
-        <button (click)="deleteUser(user)" class="btn teal" type="button" name="button">Delete</button>
+        <app-user-item [user]="user" class="col s8"></app-user-item>
+        <button (click)="deleteUser(user)" class="btn teal right col s4 z-depth-4" type="button" name="button">Delete</button>
       </li>
     </ul>
   </div>
