@@ -8,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserListComponent {
   users: Array<User> = [];
-
+  searchText: String;
 
   onCreateUser(user: User) {
-      console.log(this.users);
+    console.log(this.users);
     this.users.push(user);
+  }
+
+  deleteUser(user: User) {
+    this.users.splice(this.users.indexOf(user), 1);
   }
 }

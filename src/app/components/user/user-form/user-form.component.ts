@@ -11,10 +11,10 @@ export class UserFormComponent  {
   user: User = new User();
   @Output() onCreate: EventEmitter<User> = new EventEmitter<User>();
 
-  onSubmitUserForm(quoteForm: NgForm) {
+  onSubmitUserForm(userForm: NgForm) {
     console.log(this.user);
-    this.onCreate.emit(this.user); // this.onCreate.emit(Object.assign({}, this.quote));
+    this.onCreate.emit(this.user); // this.onCreate.emit(Object.assign({}, this.user));
     this.user = new User();
-    quoteForm.reset();
+    userForm.reset();
   }
 }

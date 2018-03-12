@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { UserFormComponent } from './components/user/user-form/user-form.component';
 import { UserItemComponent } from './components/user/user-item/user-item.component';
 import { UserListComponent } from './components/user/user-list/user-list.component';
-import { UserSearchComponent } from './components/user/user-search/user-search.component';
 import { FilterPipe } from './pipes/filter-pipe.pipe';
 
 
@@ -16,7 +15,6 @@ import { FilterPipe } from './pipes/filter-pipe.pipe';
     UserFormComponent,
     UserItemComponent,
     UserListComponent,
-    UserSearchComponent,
     FilterPipe
   ],
   imports: [
